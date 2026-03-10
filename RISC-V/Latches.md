@@ -101,20 +101,19 @@ endmodule
 
 ```verilog
 module gated_sr_latch (
-    input  logic E, // Разрешающий сигнал (Enable)
+    input  logic E,
     input  logic S,
     input  logic R,
     output logic Q,
-    output logic Qn
+    output logic Q_neg
 );
-    logic s_gated, r_gated;
+    logic s_gate, r_gate;
+    assign s_gate = S & E;
+    assign r_gate = R & E;
 
-    // Сигналы доходят до защелки только при E == 1
-    assign s_gated = S & E;
-    assign r_gated = R & E;
+    assign Q  = ~(r_gate | Q_neg);
+    assign Q_neg = ~(s_gate | Q);
 
-    assign Q  = ~(r_gated | Qn);
-    assign Qn = ~(s_gated | Q);
 endmodule
 ```
 
