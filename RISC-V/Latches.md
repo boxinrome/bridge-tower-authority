@@ -3,8 +3,11 @@
 Рассмотим сначала cхему и таблицу истинности RS-триггера:
 <p>
 <div class = "image-box">
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-триггер" width = "400" length = "400">
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-триггера" width = "400" length = "400">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-защелка" width = "400" length = "400">
+  <em>Схема RS-защелки</em>
+
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-защелка" width = "400" length = "400">
+  <em>Таблица истинности RS-защелки</em>
 </div>
 </p>
 
@@ -80,7 +83,7 @@ rs_latch rs1 (
 endmodule
 ```
 # Cтробируемая RS-защелка
-Имеется еще оди вход по сравнению c RS-защелкой. Когда на E логическая единица, то ведется себя как обычная защелка, а если ноль - игнорирует сигнал и сохраняет свое состояние.
+Имеется еще оди вход по сравнению c RS-защелкой. Когда на E логическая единица, то ведется себя как обычная защелка, а если ноль - игнорирует сигнал и сохраняет свое состояние. Это необходимо, чтобы управлять моментами, когда защелка будет реагировать на входы R и S.
 ```verilog
 module gated_sr_latch (
     input  logic E, // Разрешающий сигнал (Enable)
