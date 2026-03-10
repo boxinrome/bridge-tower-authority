@@ -113,4 +113,11 @@ module gated_sr_latch (
     assign Qn = ~(s_gated | Q);
 endmodule
 ```
-
+<p align="center">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/grs_table.png" alt="D-защелка"><br>
+  <em>Схема стробируемой RS-защелки</em>
+</p>
+<p align="center">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/grs_time.png" alt="D-защелка"><br>
+  <em>Временная диаграмма RS-защелки</em>
+</p>
