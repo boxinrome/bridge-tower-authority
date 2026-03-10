@@ -28,7 +28,7 @@ rs_latch rs1 (
     .r(r),
     .q_n(q_n),
     .q(q)
-)
+);
 
 endmodule
 ```
@@ -46,7 +46,7 @@ endmodule
 Если clk = 1, то на одном и будет ноль, а а другом - 1, и это определяется из  
 
 ``` verilog
-module rs_latch#(
+module rs_latch (
     input r,
     input s,
     output q,
