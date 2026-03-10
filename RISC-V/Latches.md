@@ -2,16 +2,16 @@
 1) В целом
 Рассмотим сначала cхему и таблицу истинности RS-триггера:
 <p align="center">
-<div class = "image-box">
+
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-защелка" width = "400" length = "400"><br>
   <em>Схема RS-защелки</em>
-</div>
+
 </p>
 <p align="center">
-  <div>
+
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-защелка" width = "400" length = "400"><br>
   <em>Таблица истинности RS-защелки</em>
-</div>
+
 </p>
 
 - Когда поступает команда сброса R=1, выход Q принимает значение 0, а выход Q¯ – противоположное
