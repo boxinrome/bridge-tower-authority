@@ -102,17 +102,17 @@ endmodule
 ```verilog
 module gated_sr_latch (
     input  logic E,
-    input  logic S,
-    input  logic R,
-    output logic Q,
-    output logic Q_neg
+    input  logic s,
+    input  logic r,
+    output logic q,
+    output logic q_neg
 );
     logic s_gate, r_gate;
-    assign s_gate = S & E;
-    assign r_gate = R & E;
+    assign s_gate = s & E;
+    assign r_gate = r & E;
 
-    assign Q  = ~(r_gate | Q_neg);
-    assign Q_neg = ~(s_gate | Q);
+    assign q  = ~(r_gate | q_neg);
+    assign q_neg = ~(s_gate | q);
 
 endmodule
 ```
