@@ -91,6 +91,10 @@ endmodule
   <em>Таблица истинности D-защелки</em>
 </p>
 
+<p align="center">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/d_time.png" alt="D-защелка"><br>
+  <em>Временная диаграмма D-защелки</em>
+</p>
 
 
 # Cтробируемая RS-защелка
