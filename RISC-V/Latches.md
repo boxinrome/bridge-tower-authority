@@ -4,5 +4,8 @@
 
 D определяет следующее состояние, а clk - когда оно меняется.
 
-![Cхема D-защелки](https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/image.png)
+<p align="center">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/image.png" alt="D-защелка"><br>
+  <em>Схема D-защелки</em>
+</p>
 
