@@ -3,13 +3,13 @@
 Рассмотим сначала cхему и таблицу истинности RS-триггера:
 <p align="center">
 
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-защелка" width = "400" length = "400"><br>
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-защелка"><br>
   <em>Схема RS-защелки</em>
 
 </p>
 <p align="center">
 
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-защелка" width = "400" length = "400"><br>
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-защелка"><br>
   <em>Таблица истинности RS-защелки</em>
 
 </p>
@@ -90,6 +90,9 @@ endmodule
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/D_table.png" alt="D-защелка"><br>
   <em>Таблица истинности D-защелки</em>
 </p>
+
+
+
 # Cтробируемая RS-защелка
 Имеется еще оди вход по сравнению c RS-защелкой. Когда на E логическая единица, то ведется себя как обычная защелка, а если ноль - игнорирует сигнал и сохраняет свое состояние. Это необходимо, чтобы управлять моментами, когда защелка будет реагировать на входы R и S.
 ```verilog
