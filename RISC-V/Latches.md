@@ -1,6 +1,5 @@
 # RS-триггер
-1) В целом
-Рассмотим сначала cхему и таблицу истинности RS-триггера:
+1) Рассмотим сначала cхему и таблицу истинности RS-триггера:
 <p align="center">
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-защелка"><br>
   <em>Схема RS-защелки</em>
