@@ -6,10 +6,15 @@ D-триггер-защелка состоит из:
 D определяет следующее состояние, а clk - когда оно меняется.
 
 <p align="center">
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/image.png" alt="D-защелка"><br>
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/D-latch.png" alt="D-защелка"><br>
   <em>Схема D-защелки</em>
 </p>
 
 #Таблица истинности
 Рассмотим сначала таблицу истинности RS-триггера
-
+<p align="center">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-триггер"><br>
+  <em>RS-триггер</em>
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/RS_table.png" alt="Таблица истинности RS-триггера"><br>
+  <em>Таблица истинности RS-триггера</em>
+</p>
