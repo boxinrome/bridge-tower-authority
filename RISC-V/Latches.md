@@ -99,6 +99,11 @@ endmodule
 
 # Cтробируемая RS-защелка
 Имеется еще оди вход по сравнению c RS-защелкой. Когда на E логическая единица, то ведется себя как обычная защелка, а если ноль - игнорирует сигнал и сохраняет свое состояние. Это необходимо, чтобы управлять моментами, когда защелка будет реагировать на входы R и S.
+<p align="center">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/grs_table.png" alt="D-защелка"><br>
+  <em>Схема стробируемой RS-защелки</em>
+</p>
+
 ```verilog
 module gated_sr_latch (
     input  logic E, // Разрешающий сигнал (Enable)
@@ -117,10 +122,7 @@ module gated_sr_latch (
     assign Qn = ~(s_gated | Q);
 endmodule
 ```
-<p align="center">
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/grs_table.png" alt="D-защелка"><br>
-  <em>Схема стробируемой RS-защелки</em>
-</p>
+
 <p align="center">
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/grs_time.png" alt="D-защелка"><br>
   <em>Временная диаграмма RS-защелки</em>
