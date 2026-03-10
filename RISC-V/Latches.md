@@ -5,7 +5,10 @@
 <div class = "image-box">
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-защелка" width = "400" length = "400">
   <em>Схема RS-защелки</em>
-
+</div>
+</p>
+<p>
+  <div>
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-защелка" width = "400" length = "400">
   <em>Таблица истинности RS-защелки</em>
 </div>
