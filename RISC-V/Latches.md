@@ -1,3 +1,41 @@
+# RS-триггер
+1) В целом
+Рассмотим сначала cхему и таблицу истинности RS-триггера:
+<p>
+<div class = "image-box">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-триггер" width = "400" length = "400">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-триггера" width = "400" length = "400">
+</div>
+</p>
+
+- Когда поступает команда сброса R=1, выход Q принимает значение 0, а выход Q¯ – противоположное (лог. 1). 
+- Когда поступает команда установки бита S=1, выход Q становится единицей,а Q¯ – нулем. Если ни на один из входов не поступает логическая
+единица, на обоих выходах сохраняется предыдущее значение Qпред. 
+- Подача на входы одновременно R=1 и S=1 не имеет особого смысла, так как это означает, что выход должен быть одновременно и
+установлен и сброшен, что невозможно. Защелка, не зная, что ей делать, выставляет как на прямом, так и на инверсном выходе логический 0.
+
+2) Код для RS-триггера :
+``` verilog
+module rs_latch (
+    input r,
+    input s,
+    output q,
+    output q_neg
+
+);
+    assign q = ~ (r | q_neg);
+    assign q_neg = ~ ( s | q);
+    
+endmodule
+```
+<p>
+<div class = "image-box">
+  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/rs_time.png" alt="RS-триггер" >
+</div>
+</p>
+
+
+
 # D-защелка
 1) В целом
 
@@ -41,35 +79,24 @@ rs_latch rs1 (
 
 endmodule
 ```
-
-# RS-триггер
-1) В целом
-Рассмотим сначала cхему и таблицу истинности RS-триггера:
-<p>
-<div class = "image-box">
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/СхемаRS.png" alt="RS-триггер" width = "400" length = "400">
-  <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/Rs_table.png" alt="Таблица истинности RS-триггера" width = "400" length = "400">
-</div>
-</p>
-
-- Когда поступает команда сброса R=1, выход Q принимает значение 0, а выход Q¯ – противоположное (лог. 1). 
-- Когда поступает команда установки бита S=1, выход Q становится единицей,а Q¯ – нулем. Если ни на один из входов не поступает логическая
-единица, на обоих выходах сохраняется предыдущее значение Qпред. 
-- Подача на входы одновременно R=1 и S=1 не имеет особого смысла, так как это означает, что выход должен быть одновременно и
-установлен и сброшен, что невозможно. Защелка, не зная, что ей делать, выставляет как на прямом, так и на инверсном выходе логический 0.
-
-2) Код для RS-триггера :
-``` verilog
-module rs_latch (
-    input r,
-    input s,
-    output q,
-    output q_neg
-
+# Cтробируемая RS-защелка
+Имеется еще оди вход по сравнению c RS-защелкой. Когда на E логическая единица, то ведется себя как обычная защелка, а если ноль - игнорирует сигнал и сохраняет свое состояние.
+```verilog
+module gated_sr_latch (
+    input  logic E, // Разрешающий сигнал (Enable)
+    input  logic S,
+    input  logic R,
+    output logic Q,
+    output logic Qn
 );
-    assign q = ~ (r | q_n);
-    assign q_n = ~ ( s | q);
-    
+    logic s_gated, r_gated;
+
+    // Сигналы доходят до защелки только при E == 1
+    assign s_gated = S & E;
+    assign r_gated = R & E;
+
+    assign Q  = ~(r_gated | Qn);
+    assign Qn = ~(s_gated | Q);
 endmodule
 ```
 
