@@ -107,12 +107,12 @@ module gated_sr_latch (
     output logic q,
     output logic q_neg
 );
-    logic s_gate, r_gate;
-    assign s_gate = s & E;
-    assign r_gate = r & E;
+    logic s_gated, r_gated;
+    assign s_gated = s & E;
+    assign r_gated = r & E;
 
-    assign q  = ~(r_gate | q_neg);
-    assign q_neg = ~(s_gate | q);
+    assign q  = ~(r_gated | q_neg);
+    assign q_neg = ~(s_gated | q);
 
 endmodule
 ```
