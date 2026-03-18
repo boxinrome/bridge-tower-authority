@@ -29,7 +29,7 @@ module rs_latch (
     
 endmodule
 ```
-<p align ='center'>
+<p align ="center">
 
   <img src="https://github.com/boxinrome/bridge-tower-authority/blob/main/RISC-V/imgs/rs_time.png" alt="RS-триггер"><br>
   <em>Временная диаграмма RS-защелки</em>
