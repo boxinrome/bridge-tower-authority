@@ -63,9 +63,9 @@ begin
 begin
     opcode = command[6:0];
     rd = command[11:7];
-    uimm = command[31:12];
+    Uimm = command[31:12];
 
-    rd_reg = uimm << 12; // lui rd_reg, uimm
+    rd_reg = Uimm << 12; // lui rd_reg, Uimm
 end
 
 
@@ -77,9 +77,9 @@ end
 begin
     opcode = command[6:0];
     rd = command[11:7];
-    uimm = {command[31], command[19:12], command[20], command[30:21]};
+    Uimm = {command[31], command[19:12], command[20], command[30:21]};
     rd = PC + 4;
-    PC = PC + uimm; // lui rd, point - прыгает к point и сохраняет адрес возврата
+    PC = PC + Uimm; // lui rd, point - прыгает к point и сохраняет адрес возврата
 end
 ```
 Для иллюстрации все эти программки можно было бы записать в always_comb блок с case-конструкцией для формата команды.
@@ -101,7 +101,7 @@ module risc_v (
     logic [6:0] funct7;
     logic [11:0] imm;
     logic [31:0] PC = 32'b0;
-    logic [19:0] uimm;
+    logic [19:0] Uimm;
 
 always_comb 
     begin
