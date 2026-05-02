@@ -59,7 +59,9 @@ $$max\space Data\space Required\space Time =max \space Clock \space Arrival \spa
 
 Важно отметить, что в случае рассмотрения Hold Slack фронты Launch Edge и Latch Edge — это теперь уже один и тот же фронт, а не два разных фронта. Регистру-получателю в данной ситуации нужно успеть удержать данные на входе в течение времени удержания от прихода фронта клока. Но данные меняет на его входе этот же фронт, пришедший где-то в другом месте на регистр-источник. Поэтому в анализе слэка удержания разница $Latch\space Edge - Launch\space Edge = 0$ , а не периоду.
 Тогда если все подставить в одну формулу, то поулчится:
+
 $$min\space Hold\space Slack = min\space t_{D}-max\space t_{CS}+t_{CO}-CHU$$
+
 $$max\space t_{CS}=max\space t'_{CLK}- min\space t_{CLK}$$
 
 Итого имеем: 
