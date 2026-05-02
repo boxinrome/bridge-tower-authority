@@ -48,8 +48,10 @@ $$min \space Setup\space Slack = Latch \space Edge - Launch\space Edge  - max(t_
 
 Принципиальная логика такова:
 
+
 $$\space min\space Hold Slack = min\space Data \space Arrival \space Time - max\space Data\space Required\space Time$$
- т.е. **Реальное** время пути данных **минус** **Требуемое** время удержания.
+
+т.е. **Реальное** время пути данных **минус** **Требуемое** время удержания.
 
 $$min \space Data \space Arrival \space Time = Launch\space Edge + min\space t_{clk}+t_{CO}+ min\space t_{D}$$
 
