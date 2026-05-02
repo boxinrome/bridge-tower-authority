@@ -39,7 +39,7 @@ $$min \space Arrival\space Time =Launch\space Edge + max(t_{clk})+ t_{CO} + max(
 Если подставить все в начальную "принципиальную" формулу, то получится, что 
 
 $$min \space Setup\space Slack = Latch \space Edge - Launch\space Edge  - max(t_D) - CSU +\newline + (min(t'_{clk})-max(t_{clk}))- t_{SU} - t_{CO}= \newline = Period - max(t_D)-CSU+min(t_{cs})-t_{SU}- t_{CO}$$
-- Слагаемое $\min t_{CS}=min\space t'_{clk}- max\space t_{clk}$  — это растекание клока (clock skew) — минимальная величина разброса времени прихода одного фронта клока от тактового входа системы до разные синхронные регистры.
+- Слагаемое $\min t_{CS}=min\space t'_{clk}- max\space t_{clk} $ — это растекание клока (clock skew) — минимальная величина разброса времени прихода одного фронта клока от тактового входа системы до разные синхронные регистры.
 
 - Period - период тактовой частоты
 
