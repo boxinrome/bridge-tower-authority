@@ -66,6 +66,7 @@ $$max\space t_{CS}=max\space t'_{CLK}- min\space t_{CLK}$$
 
 Итого имеем: 
 $$min\space Hold\space Slack = min\space t_{D}-max\space t_{CS}+t_{CO}-CHU$$
+
 $$min \space Setup\space Slack = Period - max(t_D)-CSU+min(t_{cs})-t_{SU}- t_{CO}$$
 
 # 3. Анализ Slack
